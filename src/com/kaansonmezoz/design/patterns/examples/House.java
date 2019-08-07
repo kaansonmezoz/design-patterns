@@ -1,5 +1,7 @@
 package com.kaansonmezoz.design.patterns.examples;
 
+import com.kaansonmezoz.design.patterns.examples.builder.HouseBuilder;
+
 public class House {
     private int areaInSquareMeters;
     private boolean hasGarage;
@@ -9,14 +11,14 @@ public class House {
     private int age;
     private int price;
 
-    public House(){
-        areaInSquareMeters = 120;
-        hasGarage = true;
-        hasGarden = false;
-        hasSwimmingPool = false;
-        wallPaintInRGB = "#000";
-        age = 0;
-        price = 150000;
+    public House(HouseBuilder builder){
+        areaInSquareMeters = builder.getAreaInSquareMeters();
+        hasGarage = builder.getHasGarage();
+        hasGarden = builder.getHasGarden();
+        hasSwimmingPool = builder.getHasSwimmingPool();
+        wallPaintInRGB = builder.getWallPaintInRGB();
+        age = builder.getAge();
+        price = builder.getPrice();
     }
 
     public void setAreaInSquareMeters(int areaInSquareMeters) {
