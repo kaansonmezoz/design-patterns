@@ -1,6 +1,6 @@
-package com.kaansonmezoz.design.patterns.examples.builder;
+package com.kaansonmezoz.design.patterns.examples.builderpattern.builder;
 
-import com.kaansonmezoz.design.patterns.examples.House;
+import com.kaansonmezoz.design.patterns.examples.builderpattern.House;
 
 public class HouseBuilder {
     private int areaInSquareMeters = 120;
